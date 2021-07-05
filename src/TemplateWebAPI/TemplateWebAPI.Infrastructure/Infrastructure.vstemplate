@@ -1,0 +1,67 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<Name>TemplateWebAPI.Infrastructure</Name>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>
+		</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<CreateInPlace>true</CreateInPlace>
+		<Hidden>true</Hidden>
+	</TemplateData>
+	<TemplateContent>
+		<Project TargetFileName="$ext_safeprojectname$.Infrastructure.csproj" File="TemplateWebAPI.Infrastructure.csproj" ReplaceParameters="true">
+			<Folder Name="Configuration" TargetFolderName="Configuration">
+				<ProjectItem ReplaceParameters="true" TargetFileName="ApiConfig.cs">ApiConfig.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="DependencyInjectionConfig.cs">DependencyInjectionConfig.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="LoggerConfig.cs">LoggerConfig.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="SwaggerConfig.cs">SwaggerConfig.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Data" TargetFolderName="Data">
+				<Folder Name="Contexts" TargetFolderName="Contexts">
+					<ProjectItem ReplaceParameters="true" TargetFileName="BaseDbContext.cs">BaseDbContext.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="CompraContext.cs">CompraContext.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="MongoDbContext.cs">MongoDbContext.cs</ProjectItem>
+				</Folder>
+				<Folder Name="Extensions" TargetFolderName="Extensions">
+					<ProjectItem ReplaceParameters="true" TargetFileName="MediatorExtension.cs">MediatorExtension.cs</ProjectItem>
+				</Folder>
+				<Folder Name="Mappings" TargetFolderName="Mappings">
+					<ProjectItem ReplaceParameters="true" TargetFileName="ProdutoMapping.cs">ProdutoMapping.cs</ProjectItem>
+				</Folder>
+				<Folder Name="Repositories" TargetFolderName="Repositories">
+					<ProjectItem ReplaceParameters="true" TargetFileName="MongoRepository.cs">MongoRepository.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="PedidoRepository.cs">PedidoRepository.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="Repository.cs">Repository.cs</ProjectItem>
+				</Folder>
+			</Folder>
+			<Folder Name="Extensions" TargetFolderName="Extensions">
+				<ProjectItem ReplaceParameters="true" TargetFileName="HealthCheckBuilderExtensions.cs">HealthCheckBuilderExtensions.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Filters" TargetFolderName="Filters">
+				<ProjectItem ReplaceParameters="true" TargetFileName="SwaggerDefaultValuesFilter.cs">SwaggerDefaultValuesFilter.cs</ProjectItem>
+			</Folder>
+			<Folder Name="HealthCheck" TargetFolderName="HealthCheck">
+				<ProjectItem ReplaceParameters="true" TargetFileName="SelfHealthCheck.cs">SelfHealthCheck.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Mapper" TargetFolderName="Mapper">
+				<ProjectItem ReplaceParameters="true" TargetFileName="MappingProfile.cs">MappingProfile.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="ProdutoMappingProfile.cs">ProdutoMappingProfile.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Middlewares" TargetFolderName="Middlewares">
+				<ProjectItem ReplaceParameters="true" TargetFileName="ExceptionMiddleware.cs">ExceptionMiddleware.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="SwaggerAuthorizedMiddleware.cs">SwaggerAuthorizedMiddleware.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Options" TargetFolderName="Options">
+				<ProjectItem ReplaceParameters="true" TargetFileName="ConfigureSwaggerOptions.cs">ConfigureSwaggerOptions.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Settings" TargetFolderName="Settings">
+				<ProjectItem ReplaceParameters="true" TargetFileName="AppSettings.cs">AppSettings.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="MongoSettings.cs">MongoSettings.cs</ProjectItem>
+			</Folder>
+		</Project>
+	</TemplateContent>
+</VSTemplate>

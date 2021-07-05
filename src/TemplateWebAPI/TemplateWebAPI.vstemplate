@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+	<TemplateData>
+		<Name> Web API Template</Name>
+		<Description>Um projeto template para Web APis utilizando Swagger, Mediatr, Healthcheck, Versionamento, Log e camada de resositorio com entity framework core + mongodb</Description>
+		<LanguageTag>csharp</LanguageTag>
+		<PlatformTag>Windows</PlatformTag>
+		<PlatformTag>Linux</PlatformTag>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectTypeTag>Web</ProjectTypeTag>
+		<SortOrder>1</SortOrder>
+		<TemplateID>7d77c1e5-4c17-448e-9e5a-7040305a53a2</TemplateID>
+		<CreateNewFolder>false</CreateNewFolder>
+		<ProvideDefaultName>false</ProvideDefaultName>
+		<PreviewImage>Template.png</PreviewImage>
+		<Icon>Icon.ico</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+			<SolutionFolder Name="01 - WebApi">
+				<ProjectTemplateLink ProjectName="$projectname$.WebApi" CopyParameters="true">
+					TemplateWebAPI.WebApi\WebApi.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="02 - Application">
+				<ProjectTemplateLink ProjectName="$projectname$.Application" CopyParameters="true">
+					TemplateWebAPI.Application\Application.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="03 - Domain">
+				<ProjectTemplateLink ProjectName="$projectname$.Domain" CopyParameters="true">
+					TemplateWebAPI.Domain\Domain.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="04 - Infrastructure">
+				<ProjectTemplateLink ProjectName="$projectname$.Infrastructure" CopyParameters="true">
+					TemplateWebAPI.Infrastructure\Infrastructure.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+		</ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

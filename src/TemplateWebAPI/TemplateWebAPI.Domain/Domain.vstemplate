@@ -1,0 +1,47 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<Name>TemplateWebAPI.Domain</Name>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>
+		</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<CreateInPlace>true</CreateInPlace>
+		<Hidden>true</Hidden>
+	</TemplateData>
+	<TemplateContent>
+		<Project TargetFileName="$ext_safeprojectname$.Domain.csproj" File="TemplateWebAPI.Domain.csproj" ReplaceParameters="true">
+			<Folder Name="Communication" TargetFolderName="Communication">
+				<Folder Name="Mediator" TargetFolderName="Mediator">
+					<ProjectItem ReplaceParameters="true" TargetFileName="IMediatorHandler.cs">IMediatorHandler.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="MediatorHandler.cs">MediatorHandler.cs</ProjectItem>
+				</Folder>
+			</Folder>
+			<Folder Name="DomainObjects" TargetFolderName="DomainObjects">
+				<ProjectItem ReplaceParameters="true" TargetFileName="Entity.cs">Entity.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="IAggregateRoot.cs">IAggregateRoot.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Entites" TargetFolderName="Entites">
+				<ProjectItem ReplaceParameters="true" TargetFileName="Produto.cs">Produto.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Enumerators" TargetFolderName="Enumerators" />
+			<Folder Name="Extensions" TargetFolderName="Extensions" />
+			<Folder Name="Messages" TargetFolderName="Messages">
+				<ProjectItem ReplaceParameters="true" TargetFileName="Command.cs">Command.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="DomainNotification.cs">DomainNotification.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="Event.cs">Event.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="Message.cs">Message.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Repositories" TargetFolderName="Repositories">
+				<ProjectItem ReplaceParameters="true" TargetFileName="IMongoRepository.cs">IMongoRepository.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="IProdutoRepository.cs">IProdutoRepository.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="IRepository.cs">IRepository.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="IUnitOfWork.cs">IUnitOfWork.cs</ProjectItem>
+			</Folder>
+			<Folder Name="ValueObjects" TargetFolderName="ValueObjects" />
+		</Project>
+	</TemplateContent>
+</VSTemplate>
